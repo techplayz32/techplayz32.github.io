@@ -1,9 +1,6 @@
 function validateLogin() {
     // Dummy data for the user database
-    const users = [
-        { username: 'user1', password: 'password1' },
-        { username: 'user2', password: 'password2' }
-    ];
+    const users = JSON.parse(localStorage.getItem('users')) || [];
 
     const username = document.getElementById('username').value;
     const password = document.getElementById('password').value;
@@ -14,7 +11,7 @@ function validateLogin() {
     if (user) {
         // Login successful
         localStorage.setItem('loggedInUser', JSON.stringify(user));
-        window.location.href = '/src/dashboard.html'; // Update the path here
+        window.location.href = '/dashboard.html';
     } else {
         alert('Invalid username or password. Please try again.');
     }
