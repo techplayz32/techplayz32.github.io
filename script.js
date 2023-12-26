@@ -11,7 +11,7 @@ function validateLogin() {
     if (user) {
         // Login successful
         localStorage.setItem('loggedInUser', JSON.stringify(user));
-        window.location.href = '/dashboard.html';
+        window.location.href = '/src/dashboard.html';
     } else {
         alert('Invalid username or password. Please try again.');
     }
