@@ -14,7 +14,7 @@ function validateLogin() {
     if (user) {
         // Login successful
         localStorage.setItem('loggedInUser', JSON.stringify(user));
-        window.location.href = '/techplayz32.github.io/src/dashboard.html';
+        window.location.href = '/src/dashboard.html'; // Update the path here
     } else {
         alert('Invalid username or password. Please try again.');
     }
